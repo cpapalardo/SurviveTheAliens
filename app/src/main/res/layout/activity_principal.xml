@@ -7,35 +7,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ep4.carla.survivethealiens.Principal">
+    tools:context="com.ep4.carla.survivethealiens.PrincipalActivity">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/img_principal"
+        android:id="@+id/imageViewPrincipal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/ic_launcher"
         />
 
     <TextView
-        android:id="@+id/texto_ultimamissao"
-        android:layout_below="@+id/img_principal"
+        android:id="@+id/textViewUltimaMissao"
+        android:layout_below="@+id/imageViewPrincipal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Última Missão"
         />
 
     <LinearLayout
-        android:id="@+id/botoes1"
-        android:layout_below="@+id/texto_ultimamissao"
+        android:id="@+id/buttonPrimeiraLinha"
+        android:layout_below="@+id/textViewUltimaMissao"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
 
         <Button
-            android:id="@+id/botao_historia"
+            android:id="@+id/buttonHistoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,7 +43,7 @@
             />
 
         <Button
-            android:id="@+id/botao_opcoes"
+            android:id="@+id/buttonOpcoes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -52,14 +52,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@+id/botoes1"
+        android:layout_below="@+id/buttonPrimeiraLinha"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
 
         <Button
-            android:id="@+id/botao_perfil"
+            android:id="@+id/buttonPerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -67,12 +67,11 @@
             />
 
         <Button
-            android:id="@+id/botao_ajuda"
+            android:id="@+id/buttonAjuda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Ajuda"
             />
     </LinearLayout>
-
 </RelativeLayout>

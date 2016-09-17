@@ -3,7 +3,7 @@ package com.ep4.carla.survivethealiens;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Principal extends AppCompatActivity {
+public class PrincipalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
