@@ -1,4 +1,4 @@
-package com.ep4.carla.survivethealiens;
+package com.ep4.carla.survivethealiens.Models;
 
 public class Historia {
     private int id;

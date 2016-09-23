@@ -1,4 +1,6 @@
-package com.ep4.carla.survivethealiens;
+package com.ep4.carla.survivethealiens.Models;
+
+import com.ep4.carla.survivethealiens.Models.Capitulo;
 
 public class Missao {
     private int id;

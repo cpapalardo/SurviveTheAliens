@@ -11,25 +11,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InicialActivity">
+        <activity android:name=".Activity.InicialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PrincipalActivity" />
+        <activity android:name=".Activity.PrincipalActivity" />
         <activity
-            android:name=".RecuperarSenhaActivity"
-            android:parentActivityName=".LoginActivity"
+            android:name=".Activity.RecuperarSenhaActivity"
+            android:parentActivityName=".Activity.LoginActivity"
             />
         <activity
-            android:name=".CapituloActivity"
-            android:parentActivityName=".PrincipalActivity"
+            android:name=".Activity.CapituloActivity"
+            android:parentActivityName=".Activity.PrincipalActivity"
             />
         <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".InicialActivity"
+            android:name=".Activity.LoginActivity"
+            android:parentActivityName=".Activity.InicialActivity"
             />
     </application>
 

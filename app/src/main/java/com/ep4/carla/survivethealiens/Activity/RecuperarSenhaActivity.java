@@ -1,7 +1,9 @@
-package com.ep4.carla.survivethealiens;
+package com.ep4.carla.survivethealiens.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.ep4.carla.survivethealiens.R;
 
 public class RecuperarSenhaActivity extends AppCompatActivity {
 

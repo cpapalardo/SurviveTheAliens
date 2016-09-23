@@ -1,4 +1,4 @@
-package com.ep4.carla.survivethealiens;
+package com.ep4.carla.survivethealiens.Models;
 
 public class Capitulo {
     private int id;
