@@ -23,4 +23,12 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
+
+    // https://mvnrepository.com/artifact/com.netflix.feign/feign-core
+    compile group: 'com.netflix.feign', name: 'feign-core', version: '8.18.0'
+    // https://mvnrepository.com/artifact/com.netflix.feign/feign-gson
+    compile group: 'com.netflix.feign', name: 'feign-gson', version: '8.18.0'
+
+
 }
+
