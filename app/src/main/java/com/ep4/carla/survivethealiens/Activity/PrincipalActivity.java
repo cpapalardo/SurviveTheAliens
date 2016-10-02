@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
+import com.ep4.carla.survivethealiens.Models.Jogador;
 import com.ep4.carla.survivethealiens.R;
+
+import org.greenrobot.eventbus.EventBus;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -13,10 +17,16 @@ public class PrincipalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+
+        Jogador jogador = EventBus.getDefault().removeStickyEvent(Jogador.class);
     }
 
     public void abrirHistoria(View v) {
-        Intent intent = new Intent(this, CapituloActivity.class);
+        Intent intent = new Intent(this, HistoriaActivity.class);
         startActivity(intent);
+    }
+
+    public void retomarMissao(View v){
+        Toast.makeText(this, "Ainda não tem nada aqui.", Toast.LENGTH_SHORT).show();
     }
 }
