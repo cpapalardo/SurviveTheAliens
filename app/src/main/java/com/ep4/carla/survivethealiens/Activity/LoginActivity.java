@@ -2,6 +2,7 @@ package com.ep4.carla.survivethealiens.Activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ep4.carla.survivethealiens.Models.Jogador;
@@ -35,6 +37,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse{
 
     EditText editTextEmail;
     EditText editTextSenha;
+    TextView textViewAppName;
     LoginTask loginTask;
     Jogador jogador;
 
@@ -48,10 +51,14 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse{
 
         editTextEmail = (EditText) findViewById(R.id.input_email);
         editTextSenha = (EditText) findViewById(R.id.input_password);
-
+        textViewAppName = (TextView) findViewById(R.id.textViewAppName);
         //para garantir que a internet será acessada
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
+        //Colocando fonte no nome do app
+        Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/alien_and_cows_trial.ttf");
+        textViewAppName.setTypeface(customFont);
 
         //task = new LoginTask();
        /* task.delegate = this;
@@ -74,12 +81,26 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse{
         String email = editTextEmail.getText().toString();
         String senha = editTextSenha.getText().toString();
 
+        if(email.equals("")) {
+            Toast.makeText(this, "E-mail não pode estar vazio.", Toast.LENGTH_SHORT).show();
+            return;
+        }else if(senha.equals("")){
+            Toast.makeText(this, "Senha não pode estar vazia.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Jogador _jogador = new Jogador(email, senha);
        /* new LoginTask(this, _jogador).execute();
         //jogador = loginTask.doInBackground();
 /*        if(_jogador == null)
             return;*/
 
+     /*   if(jogador != null && jogador.getId() > 0){
+            iniciarTelaLogin(v);
+        }
+        else
+            Toast.makeText(this, "E-mail ou senha inválidos.", Toast.LENGTH_SHORT).show();
+*/iniciarTelaLogin(v);
     }
 
     public void iniciarTelaLogin(View v) {

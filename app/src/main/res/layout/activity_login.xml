@@ -16,8 +16,17 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/betamorphalienlogodesign"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Survive the Aliens"
+            android:id="@+id/textViewAppName"
+            android:textSize="30dp"/>
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout
@@ -53,7 +62,7 @@
             android:layout_marginBottom="24dp"
             android:padding="12dp"
             android:text="Login"
-            android:onClick="iniciarTelaLogin"
+            android:onClick="autenticar"
             style="@style/Widget.AppCompat.Button.Colored"
             />
 
