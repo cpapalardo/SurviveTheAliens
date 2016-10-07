@@ -10,11 +10,16 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled true
+            shrinkResources true
         }
     }
 }
@@ -23,7 +28,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    compile 'com.android.support:multidex:1.0.0'
     // https://mvnrepository.com/artifact/com.netflix.feign/feign-core
     //compile group: 'com.netflix.feign', name: 'feign-core', version: '8.18.0'
     // https://mvnrepository.com/artifact/com.netflix.feign/feign-gson
@@ -50,7 +55,7 @@ dependencies {
     compile 'com.netflix.feign:feign-core:8.16.2'
     compile 'com.android.support:cardview-v7:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.google.android.gms:play-services-maps:9.6.1'
     testCompile 'junit:junit:4.12'
 }
 
